@@ -1,0 +1,17 @@
+{
+  "name": "@emotos/openclaw",
+  "version": "0.1.0",
+  "description": "Emotos MCP security proxy for OpenClaw",
+  "type": "module",
+  "private": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": {
+    "./setup": "./scripts/setup.js",
+    "./start": "./scripts/start.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

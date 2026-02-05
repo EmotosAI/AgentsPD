@@ -46,10 +46,10 @@ This spins up the MCP WebSocket proxy. All tool calls from your OpenClaw agent n
 | `apiUrl` | Emotos API base URL (defaults to `https://api.emotos.ai`) |
 | `proxyUrl` | MCP proxy WebSocket URL (defaults to `wss://proxy.emotos.ai/v1/mcp`) |
 
-Both URL fields can be overridden via environment variables before running setup:
+Both URL fields can be overridden via environment variables before running setup (useful if you are self-hosting):
 
 ```sh
-EMOTOS_API_URL=http://localhost:3000 EMOTOS_PROXY_URL=ws://localhost:8080 node scripts/setup.js
+EMOTOS_API_URL=https://api.emotos.ai EMOTOS_PROXY_URL=wss://proxy.emotos.ai/v1/mcp node scripts/setup.js
 ```
 
 ## License
