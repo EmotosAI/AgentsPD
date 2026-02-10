@@ -1,17 +1,58 @@
 {
-  "name": "@emotos/openclaw",
-  "version": "0.1.0",
-  "description": "Emotos MCP security proxy for OpenClaw",
+  "name": "agentspd",
+  "version": "1.0.0",
+  "description": "Emotos CLI - Security Infrastructure for AI Agents",
   "type": "module",
-  "private": false,
-  "engines": {
-    "node": ">=20"
+  "bin": {
+    "agentspd": "dist/index.js"
   },
-  "exports": {
-    "./setup": "./scripts/setup.js",
-    "./start": "./scripts/start.js"
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "emotos",
+    "ai",
+    "agents",
+    "security",
+    "mcp",
+    "cli"
+  ],
+  "license": "MIT",
+  "author": "Emotos <hello@emotos.ai>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmotosAI/AgentsPD.git"
+  },
+  "homepage": "https://emotos.ai",
+  "bugs": {
+    "url": "https://github.com/EmotosAI/AgentsPD/issues"
   },
   "dependencies": {
-    "ws": "^8.18.0"
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "conf": "^13.1.0",
+    "inquirer": "^9.2.15",
+    "ora": "^8.0.1",
+    "table": "^6.9.0",
+    "ws": "^8.17.0",
+    "yaml": "^2.3.4"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "@types/node": "^22.10.5",
+    "@types/ws": "^8.5.12",
+    "@types/yaml": "^1.9.6",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
   }
 }
